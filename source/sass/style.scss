@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'FF Good Pro';
+  src: local('FF Good Pro Medium'), local('FF-Good-Pro-Medium'),
+    url('../fonts/FFGoodPro-Medium.woff2') format('woff2'),
+    url('../fonts/FFGoodPro-Medium.woff') format('woff'),
+    url('../fonts/FFGoodPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Good Pro';
+  src: local('Good Pro'), local('GoodPro'),
+      url('../fonts/FFGoodPro-Regular.woff2') format('woff2'),
+      url('../fonts/FFGoodPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$desktop-width: 1680px;
+$tablet-width: 640px;
+$mobile-width: 360px;
+
+
+html,
+body,
+*,
+h1, h2, h3, h4, h5, h6 {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Good Pro';
+  background-color: #F8F8F8;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+input[type="number"] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/main-header";
+@import "blocks/form";
+@import "blocks/footer";
+

@@ -1,0 +1,18 @@
+.footer {
+  max-width: $desktop-width;
+  height: 489px;
+
+  margin: 0 auto;
+  margin-top: 140px;
+
+  background-color: #ECEFF1;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 70px;
+    min-width: $tablet-width;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: $mobile-width;
+  }
+}

@@ -1,0 +1,46 @@
+.main__wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    min-width: 640px;
+  }
+
+   @media (max-width: $mobile-width) {
+    min-width: $mobile-width;
+  }
+
+  h1 {
+    width: 560px;
+
+    text-align: center;
+
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+
+    margin: auto;
+    margin-top: 40px;
+
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 500;
+
+    @media (max-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
+.main__source-money {
+  width: 400px;
+
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+
+  font-size: 16px;
+  line-height: 24px;
+}

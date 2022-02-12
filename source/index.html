@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <header class="header">
+      <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="index.html">
+              <img class="header__main-logo header__main-logo--2"  src="img/header/logo-2.svg" alt="" width="200" height="36">
+              <img class="header__main-logo"  src="img/header/logo.svg" alt="" width="200" height="36">
+              <img class="mini-logo" src="img/header/by_Freedom_Finance.svg" alt="" width="95" height="11">
+            </a>
+          </div>
+          <div class="header__container">
+            <div class="header__box">
+                <a class="header__questionnaire" href="#">Анкета</a>
+                <a href="#" class="exit">Выход</a>
+            </div>
+            <div class="header__cart">
+              <img src="img/header/cart.svg" alt=""><span class="cart-text">Cart</span>
+              <span class="cart-number">3</span>
+            </div>
+        </div>
+      </div>
+  </header>
+
+  <main class="main">
+    <div class="main__wrapper">
+      <div class="main__header">
+        <h1>Ваше налоговое резидентство</h1>
+        <p class="main__source-money">Раскройте источник средств</p>
+
+        <div class="main__indicator">
+          <div class="main__indicator__strip main__indicator__strip--green"></div>
+          <div class="main__indicator__strip main__indicator__strip--green"></div>
+          <div class="main__indicator__strip main__indicator__strip--gray"></div>
+          <div class="main__indicator__strip main__indicator__strip--gray"></div>
+        </div>
+      </div>
+
+      <div class="form">
+        <form id="form" action="#" method="POST">
+          <select name="country" class="input residence" required>
+            <option value="" disabled selected>Налоговое резидентство</option>
+            <option value="Russia">Российская Федерация</option>
+            <option value="USA">США</option>
+            <option value="Great-Britain">Англия</option>
+            <option value="Cyprus">Кипр</option>
+          </select>
+          <span id="residenceError" class="form__invalid-error">Выберите одно из значений</span>
+          <input type="number" class="input inn" placeholder="Индивидуальный номер налогоплательщика" required>
+          <span id="inn-error" class="form__invalid-error">Поле обязательно для заполнения</span>
+          <p class="form__checkbox">
+            <label class="form__checkbox-label">
+              <input type="checkbox" class="form__checkbox-indicator visually-hidden"><span class="form__checkbox-custom"></span>
+              <span>Я не помню свой номер налогоплательщика</span>
+            </label>
+          </p>
+          <h2>Являетесь ли Вы налоговым резидентом США?</h2>
+          <div class="buttons form__radio-residence">
+            <label class="form__radio-label">
+              <input data-id="yes" class="form__radio-indicator visually-hidden" type="radio" name="residence">
+              <span data-id="yes" class="form__btn form__btn--yes">Да</span>
+            </label>
+            <label class="form__radio-label">
+              <input data-id="no" class="form__radio-indicator visually-hidden" type="radio" name="residence">
+              <span data-id="no" class="form__btn form__btn--no">Нет</span>
+            </label>
+            <span id="residence-error" class="form__invalid-error">К сожалению, мы не можем открыть счет налоговому резиденту США.</span>
+            <span class="form__invalid-error form__yes-no-error">Выберите одно и значений</span>
+          </div>
+          <div class="questions">
+            <p>
+              Попадаете ли Вы под категорию налогоплательщиков в Соединенных Штатах Америки по каким-либо другим причинам? (например,
+               обладатель двойного резидентства, владелец загородного дома/помещения, подача совместной декларации о доходах с супругом
+               и т.д.)
+            </p>
+          </div>
+          <h2>Вы или Ваши родственники связаны с публичными политическими персонами?</h2>
+          <div class="buttons public">
+            <label class="form__radio-label">
+              <input data-id="yes"  class="form__radio-indicator visually-hidden" type="radio" name="public">
+              <span class="form__btn form__btn--yes">Да</span>
+            </label>
+            <label class="form__radio-label">
+              <input data-id="no" class="form__radio-indicator visually-hidden" type="radio" name="public">
+              <span class="form__btn form__btn--no">Нет</span>
+            </label>
+            <span class="form__invalid-error form__yes-no-error form__yes-no-error-2">Выберите одно и значений</span>
+          </div>
+          <select name="money" id="" class="input form__money" required>
+            <option value="" disabled selected>Размер благосостояния</option>
+            <option value="Russia">Богатый</option>
+            <option value="USA">Средний класс</option>
+            <option value="Great-Britain">Бедный</option>
+            <option value="Cyprus">Нищий</option>
+          </select>
+          <span id="moneyError" class="form__invalid-error">Выберите одно из значений</span>
+          <button class="form__continue-btn" type="submit">Продолжить</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
