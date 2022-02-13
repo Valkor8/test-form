@@ -23,7 +23,9 @@ const innValidity = () => {
   if (inn.value.length !== LENGTH) {
     inn.setCustomValidity(`Значение поля ИНН должно быть равно ${LENGTH} символам`);
   } else if (inn.validity.valueMissing) {
-    inn.setCustomValidity('Поле обязательно для заполнения');
+    if (!checkbox.checked) {
+      inn.setCustomValidity('Поле обязательно для заполнения');
+    }
   } else {
     inn.setCustomValidity('');
   }
@@ -65,22 +67,6 @@ const innEnabled = () => {
   checkbox.removeAttribute('disabled');
   residenceInvalid.style.display='none';
 }
-
-// residence.addEventListener('change', (evt) => {
-//   if (evt.target.value === 'USA') {
-//     innDisabled();
-//     radioResidence.forEach((item) => {
-//       if (item.dataset.id === 'yes') {
-//         item.setAttribute('checked', true)
-//       } else {
-//         item.removeAttribute('checked');
-//       }
-//     });
-//   } else {
-//     innEnabled();
-//     radioResidence.forEach((item) => item.removeAttribute('checked'));
-//   }
-// });
 
 radioResidence.forEach((item) => {
   item.addEventListener('click', (evt) => {
@@ -137,6 +123,8 @@ const isRadioPublicValid = () => {
 
 const isInnValid = () => {
   if (checkbox.checked) {
+    inn.setCustomValidity('');
+    console.log(inn.validity.valid)
     return;
   }
   if (inn.value === '') {
