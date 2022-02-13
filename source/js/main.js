@@ -124,7 +124,6 @@ const isRadioPublicValid = () => {
 const isInnValid = () => {
   if (checkbox.checked) {
     inn.setCustomValidity('');
-    console.log(inn.validity.valid)
     return;
   }
   if (inn.value === '') {
