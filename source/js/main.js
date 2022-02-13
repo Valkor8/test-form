@@ -172,17 +172,14 @@ formButton.addEventListener('click', (evt) => {
 
   isInnValid();
 
-  isRadioResidenceValid();
+  const isResidence = isRadioResidenceValid();
+  const isPublic = isRadioPublicValid();
 
   isResidenceValid();
 
   isMoneyValid();
 
-  if (!isRadioPublicValid()) {
-    return
-  }
-
-  if (inn.validity.valid === false || residence.validity.valid === false || formMomey.validity.valid === false) {
+  if (inn.validity.valid === false || isResidence === false || isPublic === false) {
     return
   }
 
