@@ -61,7 +61,9 @@ const html = () => {
 
 const scripts = () => {
     return gulp.src("source/js/*.js")
-        // .pipe(terser())
+        .pipe(sourcemap.init())
+        .pipe(terser())
+        .pipe(sourcemap.write("."))
         .pipe(gulp.dest("build/js"))
         .pipe(sync.stream());
 }
